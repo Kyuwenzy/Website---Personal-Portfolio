@@ -147,7 +147,7 @@ export default function Footer() {
           © {year} Quenzzy J. Navelgas · All Rights Reserved
         </span>
         <span className="font-mono text-[8px] tracking-[0.2em] text-[var(--text-muted)] uppercase">
-          Crafted with precision · Dasmariñas, Cavite · PH
+          Dasmariñas, Cavite · PH
         </span>
       </div>
     </footer>
