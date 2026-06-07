@@ -84,21 +84,10 @@ export default function Hero() {
         }}
       >Q</div>
 
-      {/* ── Portrait panel ────────────────────────────────────────────────
-          FIX: The image is ALWAYS visible (opacity-100, no state dependency).
-          The wipe overlay sits on top and slides away after a short delay.
-          This way the image shows up regardless of load timing.
-      ──────────────────────────────────────────────────────────────────── */}
       <div className="absolute top-0 right-0 w-[58%] h-full overflow-hidden z-10">
 
-        {/*
-          IMAGE — no wipe, no opacity tricks, no state.
-          Just a plain visible image. Grayscale by default,
-          desaturates to colour on hover. The left-edge gradient
-          creates the bleed-into-paper effect editorially.
-        */}
         <img
-          src="/profile.jpg"
+          src="/1.png"
           alt="Quenzzy Navelgas"
           className="absolute inset-0 w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-1000"
           onError={(e) => {
@@ -172,7 +161,7 @@ export default function Hero() {
           transition={{ delay: 1.5 }}
           className="mt-6 max-w-xs"
         >
-          {['CS Student', '·', 'ML Developer', '·', 'QA Engineer', '·', 'AI Scripter'].map((word, i) => (
+          {['CS Student', '·', 'ML Developer', '·', 'Vibe Coder', '·', 'AI Scripter'].map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, x: -8 }}

@@ -14,114 +14,64 @@ export const portfolioData = {
   },
 
   highlights: [
-    { label: "Projects Shipped", value: "3+", icon: "Rocket" },
+    { label: "Projects Shipped", value: "3+",  icon: "Rocket"      },
     { label: "Best ML Accuracy", value: "94%", icon: "BrainCircuit" },
-    { label: "AI-Assisted Scriptwriting", value: "100+", icon: "Youtube" },
-    { label: "Certifications", value: "2", icon: "Award" },
+    { label: "Scripts Written",  value: "100+", icon: "Youtube"     },
+    { label: "Certifications",   value: "2",   icon: "Award"        },
   ],
 
-    skills: [
-      {
-        category: "Web Development",
-        icon: "Globe",
-        items: [
-          "Astro",
-          "Bootstrap",
-          "CSS",
-          "Django",
-          "HTML",
-          "JavaScript",
-          "MySQL",
-          "Next.js",
-          "PHP",
-          "PostgreSQL",
-          "React",
-          "SQLite",
-          "Tailwind CSS",
-          "TypeScript"
-        ]
-      },
-      {
-        category: "Machine Learning",
-        icon: "BrainCircuit",
-        items: [
-          "Cross-Validation",
-          "Feature Engineering",
-          "Hyperparameter Tuning",
-          "NumPy",
-          "Pandas",
-          "Python",
-          "Scikit-learn"
-        ]
-      },
-      {
-        category: "Testing & QA",
-        icon: "TestTube",
-        items: [
-          "Automation Testing",
-          "Bug Tracking",
-          "Playwright",
-          "Regression Testing"
-        ]
-      },
-      {
-        category: "Data & Analytics",
-        icon: "BarChart3",
-        items: [ 
-          "Looker Studio",
-          "Power BI",
-          "Tableau"
-        ]
-      },
-      {
-        category: "DevOps & Version Control",
-        icon: "GitBranch",
-        items: [
-          "Branching",
-          "Git",
-          "GitHub",
-          "Pull Requests"
-        ]
-      },
-      {
-        category: "IT & Networking",
-        icon: "Network",
-        items: [
-          "Computer Hardware",
-          "Command Line Interface",
-          "DNS",
-          "Linux",
-          "Network Security",
-          "Troubleshooting",
-          "Windows"
-        ]
-      },
-      {
-        category: "Collaboration",
-        icon: "Users",
-        items: [
-          "Discord",
-          "Google Workspace",
-          "Microsoft Office",
-          "Notion",
-          "Trello"
-        ]
-      },
-      {
-        category: "AI Tools",
-        icon: "Sparkles",
-        items: [
-          "BlackBox",
-          "ChatGPT",
-          "Claude",
-          "Cursor",
-          "DeepSeek",
-          "Gemini",
-          "Groq AI",
-          "Poppy"
-        ]
-      }
-    ],
+  skills: [
+    {
+      category: "Web Development",
+      icon: "Globe",
+      items: [
+        "Astro", "Bootstrap", "CSS", "Django", "HTML", "JavaScript",
+        "MySQL", "Next.js", "PHP", "PostgreSQL", "React",
+        "SQLite", "Tailwind CSS", "TypeScript",
+      ],
+    },
+    {
+      category: "Machine Learning",
+      icon: "BrainCircuit",
+      items: [
+        "Cross-Validation", "Feature Engineering", "Hyperparameter Tuning",
+        "NumPy", "Pandas", "Python", "Scikit-learn",
+      ],
+    },
+    {
+      category: "Testing & QA",
+      icon: "TestTube",
+      items: ["Automation Testing", "Bug Tracking", "Playwright", "Regression Testing"],
+    },
+    {
+      category: "Data & Analytics",
+      icon: "BarChart3",
+      items: ["Looker Studio", "Power BI", "Tableau"],
+    },
+    {
+      category: "DevOps & Version Control",
+      icon: "GitBranch",
+      items: ["Branching", "Git", "GitHub", "Pull Requests"],
+    },
+    {
+      category: "IT & Networking",
+      icon: "Network",
+      items: [
+        "Computer Hardware", "Command Line Interface", "DNS",
+        "Linux", "Network Security", "Troubleshooting", "Windows",
+      ],
+    },
+    {
+      category: "Collaboration",
+      icon: "Users",
+      items: ["Discord", "Google Workspace", "Microsoft Office", "Notion", "Trello"],
+    },
+    {
+      category: "AI Tools",
+      icon: "Sparkles",
+      items: ["BlackBox", "ChatGPT", "Claude", "Cursor", "DeepSeek", "Gemini", "Groq AI", "Poppy"],
+    },
+  ],
 
   experience: [
     {
@@ -176,9 +126,9 @@ export const portfolioData = {
 
   projects: [
     {
-      id: '01',
-      title: 'WoofWoof',
-      subtitle: 'ML-Based Dog Disease Prediction System',
+      id: "01",
+      title: "WoofWoof",
+      subtitle: "ML-Based Dog Disease Prediction System",
       period: "2025 – 2026",
       context: "Emilio Aguinaldo College — Thesis Project",
       description:
@@ -191,51 +141,61 @@ export const portfolioData = {
         "Implemented security features: rate limiting, brute-force protection, and CAPTCHA.",
         "Collaborated with licensed veterinarians to validate clinical accuracy of encoded symptom-disease relationships.",
       ],
-      tech: [
-        "Python",
-        "Django",
-        "Scikit-learn",
-        "PostgreSQL",
-        "Groq AI",
-        "JavaScript",
-      ],
-      metric: '94%',
-      metricSub: 'Cross-Validated Accuracy',
+      tech: ["Python", "Django", "Scikit-learn", "PostgreSQL", "Groq AI", "JavaScript"],
+      metric: "94%",
+      metricSub: "Cross-Validated Accuracy",
+      screenshot: "/woofwoof-preview.png",
       github: "https://github.com/Kyuwenzy/WoofWoof-CDDPS",
       demo: "https://woofwoof-cddps.onrender.com",
-      featured: true,
     },
 
     {
-      id: '02',
-      title: 'PesoTrack',
-      subtitle: 'Budgeting & Expense Tracking Web App',
+      id: "02",
+      title: "PesoTrack",
+      subtitle: "Budgeting & Expense Tracking Web App",
       period: "2026",
       context: "Personal Project",
       description:
         "A full-stack personal finance web app for tracking income, expenses, and savings goals — featuring multi-currency support, AI-powered insights, and a real-time dashboard with budget analytics.",
       bullets: [
-        "Built end-to-end with Next.js 15 App Router, Prisma ORM, and PostgreSQL (Neon), with NextAuth v5 for Google OAuth and credential-based authentication.",
-        "Designed a global multi-currency system with live exchange rates, supporting 11 currencies with real-time conversion across all charts, KPIs, transactions, budgets, and reports.",
-        "Implemented a responsive bento-grid dashboard with animated KPI cards, cash flow bar charts, categorical spending pie charts, and a recent activity feed.",
-        "Integrated Groq AI to generate personalized financial insights and spending pattern summaries from the user's transaction history.",
-        "Built a dynamic theming system with light/dark/system mode and 6 selectable color themes, all persisted across sessions.",
-        "Developed full CRUD for accounts, transactions, budgets, savings goals, and categories — with CSV/Excel import, JSON backup/restore, and CSV export.",
+        "Built with Next.js 15 App Router, Prisma ORM, and PostgreSQL (Neon), with NextAuth v5 for Google OAuth and credential-based authentication.",
+        "Designed a global multi-currency system with live exchange rates, supporting 11 currencies with real-time conversion across all charts and KPIs.",
+        "Implemented a responsive bento-grid dashboard with animated KPI cards, cash flow bar charts, and categorical spending pie charts.",
+        "Integrated Groq AI to generate personalized financial insights and spending pattern summaries.",
+        "Built a dynamic theming system with light/dark/system mode and 6 selectable color themes.",
+        "Developed full CRUD for accounts, transactions, budgets, savings goals — with CSV/Excel import and JSON backup.",
       ],
-      tech: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "Groq AI",
-        "Tailwind CSS",
-      ],
-      metric: '11',
-      metricSub: 'Currencies Supported',
+      tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Groq AI", "Tailwind CSS"],
+      metric: "11",
+      metricSub: "Currencies Supported",
+      screenshot: "/pesotrack-preview.png",
       github: "https://github.com/Kyuwenzy/Pesotrack---Your-Budgeting-Companion",
       demo: "https://pesotrack-your-budgeting-companion.vercel.app/",
-      featured: true,
     },
+
+    {
+      id: "03",
+      title: "Portfolio",
+      subtitle: "Editorial Personal Portfolio Website",
+      period: "2026",
+      context: "Personal Project",
+      description:
+        "A magazine-editorial personal portfolio built with Next.js 14 and Framer Motion — designed to communicate that a Computer Science graduate is not just technical, but also deeply creative. Inspired by the art direction of GQ, Vogue, and Cosmopolitan.",
+      bullets: [
+        "Designed an original editorial design system — GQ gold-on-paper palette, Cormorant Garamond display type, JetBrains Mono for code register, and a strict no-rounded-corners philosophy.",
+        "Built premium animations: character-by-character name reveal, masked slide-up section headers, magnetic 3D hover cards, clip-path panel transitions, and a continuously rotating SVG stamp seal.",
+        "Implemented a full-screen editorial navigation drawer, scroll-driven chapter indicator, dual-layer clip name rendering for light/dark mode compatibility, and a functional contact form via Resend API.",
+        "Architected with a single data/portfolio.ts source of truth — all content updates propagate across every section with zero component edits.",
+        "Deployed on Vercel with environment-based email dispatch and full SEO metadata including Open Graph and Twitter cards.",
+      ],
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend", "Vercel"],
+      metric: "100%",
+      metricSub: "Build with AI",
+      screenshot: "/portfolio-preview.png",
+      github: "https://github.com/Kyuwenzy/Website---Personal-Portfolio",
+      demo: "https://your-vercel-url.vercel.app",
+    },
+
   ],
 
   education: [
@@ -264,14 +224,8 @@ export const portfolioData = {
   ],
 
   awards: [
-    {
-      title: "Excellence in Team Stewardship Award",
-      icon: "Trophy",
-    },
-    {
-      title: "Polaris Award for Strategic Guidance",
-      icon: "Star",
-    },
+    { title: "Excellence in Team Stewardship Award", icon: "Trophy" },
+    { title: "Polaris Award for Strategic Guidance",  icon: "Star"  },
   ],
 
   leadership: [

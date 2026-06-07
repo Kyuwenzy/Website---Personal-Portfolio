@@ -22,6 +22,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Quenzzy J. Navelgas' }],
   creator: 'Quenzzy J. Navelgas',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/favicon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_PH',
@@ -48,7 +54,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        {/* SVG favicon — shows in browser tab, scales perfectly at any size */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        {/* Fallback for older browsers */}
+        <link rel="alternate icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>

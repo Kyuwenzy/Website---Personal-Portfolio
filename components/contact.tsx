@@ -124,20 +124,26 @@ export default function Contact() {
           className="flex flex-col justify-between p-12 md:p-16 lg:p-20 relative"
           style={{ backgroundColor: 'var(--text-primary)', color: 'var(--bg-primary)' }}
         >
-          {/* Ghost END watermark */}
+          {/* Ghost END watermark — currentColor inherits paper colour from container */}
           <div
             aria-hidden
-            className="absolute bottom-0 left-0 font-display font-black leading-none pointer-events-none select-none"
-            style={{ fontSize: 'clamp(5rem, 14vw, 16rem)', opacity: 0.04, color: '#fff', lineHeight: 1 }}
+            className="absolute bottom-0 left-0 font-display font-black leading-none pointer-events-none select-none text-current"
+            style={{ fontSize: 'clamp(5rem, 14vw, 16rem)', opacity: 0.06, lineHeight: 1 }}
           >END</div>
 
           <div className="relative z-10">
-            <div className="font-mono text-[10px] uppercase tracking-widest mb-12 pb-4 border-b"
-              style={{ color: 'rgba(var(--bg-primary-rgb, 247,245,240), 0.4)', borderColor: 'rgba(247,245,240,0.12)' }}>
+            {/*
+              FIX: Replaced all hardcoded rgba(247,245,240,...) with
+              currentColor-based opacity classes. Since the ink panel sets
+              color: var(--bg-primary) on the container, `currentColor`
+              always resolves to the correct paper colour in both modes —
+              light (bone #F7F5F0) and dark (platinum #F0EDE6).
+            */}
+            <div className="font-mono text-[10px] uppercase tracking-widest mb-12 pb-4 border-b border-current/20 text-current/50">
               [ DIRECTORY INDEX ]
             </div>
 
-            <div className="flex flex-col" style={{ borderTop: '1px solid rgba(247,245,240,0.12)' }}>
+            <div className="flex flex-col border-t border-current/20">
               {contactDetails.map((item, i) => {
                 const Tag = item.href ? 'a' : 'div';
                 const props = item.href
@@ -152,15 +158,12 @@ export default function Contact() {
                   >
                     <Tag
                       {...props as object}
-                      className="group flex items-baseline justify-between py-6"
-                      style={{ borderBottom: '1px solid rgba(247,245,240,0.12)' }}
+                      className="group flex items-baseline justify-between py-6 border-b border-current/20"
                     >
-                      <span className="font-mono text-[10px] uppercase tracking-widest transition-colors"
-                        style={{ color: 'rgba(247,245,240,0.4)' }}>
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-current/50 transition-colors">
                         {item.label}
                       </span>
-                      <span className="font-display text-lg md:text-xl tracking-tight transition-colors group-hover:text-[var(--accent)]"
-                        style={{ color: 'var(--bg-primary)' }}>
+                      <span className="font-display text-lg md:text-xl tracking-tight text-current transition-colors group-hover:text-[var(--accent)]">
                         {item.value}
                       </span>
                     </Tag>
@@ -170,8 +173,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="relative z-10 mt-12 font-mono text-[9px] uppercase tracking-widest"
-            style={{ color: 'rgba(247,245,240,0.35)' }}>
+          <div className="relative z-10 mt-12 font-mono text-[9px] uppercase tracking-widest text-current/40">
             Currently accepting global commissions<br />
             and collaborative engineering directives.
           </div>

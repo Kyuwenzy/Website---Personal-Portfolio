@@ -1,28 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-/*
-  /app/api/contact/route.ts
-  ──────────────────────────
-  Receives form data, sends email via Resend API.
-
-  ONE-TIME SETUP:
-  1. npm install resend
-  2. Sign up free at https://resend.com (no credit card needed)
-  3. Go to resend.com/api-keys → Create API key
-  4. Create .env.local in your project root:
-       RESEND_API_KEY=re_xxxxxxxxxxxx
-       CONTACT_EMAIL=quenzzynavelgas123@gmail.com
-  5. Restart dev server: npm run dev
-
-  For Vercel deployment:
-  - Go to your Vercel project → Settings → Environment Variables
-  - Add RESEND_API_KEY and CONTACT_EMAIL there
-
-  NOTE: On Resend free plan you can send from onboarding@resend.dev
-  to any email. To send from a custom domain like hi@quenzzy.dev,
-  you'll need to verify a domain in Resend (free).
-*/
-
 export async function POST(req: NextRequest) {
   try {
     const { name, email, subject, message } = await req.json();
